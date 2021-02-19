@@ -1,16 +1,38 @@
+<!DOCTYPE HTML>
 <html>
     <head>
+	<meta charset="utf-8">
+	<title>Simple Interest Calculator</title>
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
+
     </head>
     <body>
-        <h1>Simple Interest Calculator</h1>
+		<div class="maindiv">
+			<h1>Simple Interest Calculator</h1>
 
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="number"  id="rate">  <br/>
-        No. of Years <input type="number"  id="years">  <br/>
-        Interest : <span id="result"></span><br>
-
-        <button onclick="compute()">Compute</button>
+			Amount <input type="number"  id="principal">  <br/><br>
+			Rate <input type="range" id="rate" min="1" max="20" step=".25" value="10.25" onchange="show_value(this.value)"><span id="rate2" >10.25</span> <text>%</text> <br/><br>
+			<div id="years">
+			No. of Years <select id="yearsSel" class="yeardropdown"><option value="0"></option></select>		<br/>
+		    </div><br>
+			Interest : <span id="result"></span>
+			<button id="result" onclick="compute()">Compute interest</button><br><br>
+				<span>Result</span>
+			<div id="deposit"></div>
+			<div id="interestrate"></div>
+			<div id="recieveammount"></div>
+			<div id="targetyear"></div>
+				
+			<br>
+			
+			
+			<footer>
+			Author: Ovidiu<br>
+			Copywrite 2021
+			</footer>
+		</div>
     </body>
 </html>
+
+
